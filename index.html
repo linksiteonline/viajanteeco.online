@@ -1,62 +1,81 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
+<title>ANTES PRECISO SABER...</title>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="shortcut icon" href="assets/img/aviso.png">
-<link rel="stylesheet" href="./assets/css/com.css">
-
-<!--Links VTurb para deixar a VSL mais rápida!-->
-<link rel="preload" href="https://scripts.converteai.net/ca61ff2c-7c21-41ed-8290-aa0da87dc7d6/players/6359dc6914bd55000927f07d/player.js" as="script">
-<link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
-<link rel="preload" href="https://images.converteai.net/ca61ff2c-7c21-41ed-8290-aa0da87dc7d6/players/6359dc6914bd55000927f07d/thumbnail.jpg" as="image">
-<link rel="preload" href="https://cdn.converteai.net/ca61ff2c-7c21-41ed-8290-aa0da87dc7d6/6359db6c14bd55000927f075/playlist.m3u8" as="fetch">
-<link rel="dns-prefetch" href="https://cdn.converteai.net">
-<link rel="dns-prefetch" href="https://scripts.converteai.net">
-<link rel="dns-prefetch" href="https://images.converteai.net">
-<link rel="dns-prefetch" href="https://api.vturb.com.br">
-
-<!-- Título da Página -->
-<title>VIAJE TODO MÊS!</title>
-
-<style type="text/css">
-      header {
-        background: url("assets/img/bg.png");
-        background-color: rgba(0, 0, 0, 0.6);
-        background-size: cover;
-        background-blend-mode: darken;
+<link rel="shortcut icon" href="aviso.png">
+<style>
+    header {
+      background:"bg2.jpg";
+      background-color: rgba(0, 0, 0, 0.6);
+      background-repeat: no-repeat;
+      background-blend-mode: darken;
+    }
+    @font-face {
+      font-family: Gotham Rounded;
+      src: url("font.otf") format("opentype");
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      font-family: Gotham Rounded;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background: url("bg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .container {
+      width: 700px;
+      max-width: 90%;
+    }
+    .black {
+      background-color: black;
+      padding: 10px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 0 10px 2px black;
+    }
+    .answer {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 10px;
+    }
+    @media (max-width: 991px) {
+      .answer {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 10px;
       }
-    </style>    
-
-    <!-- Parte Superior da Página - Menu Fixo -->
- <style>
-                #menu-vertical{
-                    position:fixed;
-                    z-index:999;
-                    left:0%;
-                    right:0%;
-                    top:0;
-                    padding-bottom: -10px;
-                    overflow:hidden;
-                    background-color:yellow;
-                }
-            </style>
-
-    <!-- Parte Superior da Página - Atualização de Data -->
-<script type="text/javascript"> 
- function getDate(days) {   
- var dayNames = new Array("Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado");     
- var monthNames = new Array("Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");     
- var now = new Date();    
- now.setDate(now.getDate() + days);    
- var nowString =  dayNames[now.getDay()] + "," + "  " + now.getDate() + " de " + monthNames[now.getMonth()] + " de " + now.getFullYear();    
- document.write(nowString);  
- } 
-</script>
+    }
+    .btn {
+      border-radius: 10px;
+      padding: 5px 10px;
+      font-size: 30px;
+      background-color: yellow;
+      outline: none;
+      text-decoration: none;
+      color: black;
+    }
+    .black h1 {
+      color: yellow;
+    }
+    .black p {
+      font-size: 18px;
+      color: white;
+    }
+    .hide {
+      display: none;
+    }
+  </style>
 
 <!-- Meta Pixel Code -->
 <script>
@@ -69,426 +88,63 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '501805825189317');
-fbq('track', 'PageView');
+fbq('track', 'AddToCart');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=501805825189317&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=501805825189317&ev=AddToCart&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
 </head>
-
 <body>
-<body oncontextmenu="return false" onkeydown="return false">
-<div id="disclaimer-wrap"></div>
-<div id="menu-vertical">
+<body oncontextmenu="return false" onkeydown="return false">  
 <div class="container">
-<div class="row justify-content-center">
-<div class="col-lg-8 text-center">
-<center><strong> <span><u>ATENÇÃO</u>:</span> <strong style="color:red;">Devido a alta demanda de acessos, este vídeo ficará disponível</strong>
-somente até <span><script type="text/javascript">getDate(0);</script>.</span></strong></p></center>
+<div class="black">
+<div id="primeira">
+<div class="question">
+<h1>Pergunta 1</h1>
+<p>Você realmente quer descobrir esse <span style="color: yellow;">GUIA ECONÔMICO</span> para viajar quase de graça todo mês?</p>
+</div>
+<div class="answer">
+<button class="btn" onclick="segunda()">SIM</button>
+<button class="btn" onclick="segunda()">NÃO</button>
+</div>
+</div>
+<div id="segunda" class="hide">
+<div class="question">
+<h1>Pergunta 2</h1>
+<p>Você promete não revelar para ninguém?</p>
+</div>
+<div class="answer">
+<button class="btn" onclick="terceira()">SIM</button>
+<button class="btn" onclick="terceira()">NÃO</button>
+</div>
+</div>
+<div id="terceira" class="hide">
+<div class="question">
+<h1>Pergunta 3</h1>
+<p>O vídeo a seguir tem um limite para <span style="color: yellow;">pouquíssimas pessoas</span> verem ao mesmo tempo... Você pretende ver até o fim?</p>
+</div>
+<div class="answer">
+<button class="btn" onclick="redirect()">SIM</button>
+<button class="btn" onclick="redirect()">NÃO</button>
 </div>
 </div>
 </div>
+<p style="text-align: center; font-weight: bold;">© 2022 – Todos os direitos reservados. Este site não faz parte nem é endossado pelo Facebook. Facebook é uma marca comercial da Facebook, Inc.</p>
 </div>
-
-<header class="py-4">
-<div class="container">
-<div class="row justify-content-center">
-<div class="col-lg-8 text-center">
-
-<!-- Código com foto transparente!-->
-<img class="img-fluid" src="./assets/img/branco.svg">
-
-<!-- Headline -->
-<h3 class="my-4"><b><span style="color: white;">SIMPLES GUIA QUE AJUDA A VIAJAR</span> <span style="color: yellow;">TODO MÊS!</span></b></h3>
-
-<img class="img-fluid" src="./assets/img/som.svg">
-
-<!-- VSL -->
-<div id="vid_6359dc6914bd55000927f07d" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_6359dc6914bd55000927f07d" src="https://images.converteai.net/ca61ff2c-7c21-41ed-8290-aa0da87dc7d6/players/6359dc6914bd55000927f07d/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_6359dc6914bd55000927f07d" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_6359dc6914bd55000927f07d">var s=document.createElement("script");s.src="https://scripts.converteai.net/ca61ff2c-7c21-41ed-8290-aa0da87dc7d6/players/6359dc6914bd55000927f07d/player.js",s.async=!0,document.head.appendChild(s);</script>
-
-<img class="img-fluid" src="./assets/img/redes.svg">
-
-<!-- Botão -->
-<div id="cta1" class="mt-4 d-none">
-<a href="https://pay.hotmart.com/K76088833M?checkoutMode=10" class="a-btn" style="text-decoration: none;">
-<span class="span-btn">QUERO COMPRAR AGORA!</span>
-<span class="span-btn2">(atenção: tempo limitado)</span>
-</a>
-
-</div>
-</div>
-</div>
-</div>
-</header>
-
-<section class="comments py-4">
-<div class="container">
-<div class="row justify-content-center">
-<div class="col-lg-8">
-<div class="fb-comments" style="margin-top: 5px;">
-<div class="fb-comments-header">
-<span>73 comentários</span>
-</div>
-<div class="fb-comments-wrapper" id="2">
-<table class="fb-comments-comment">
-<tbody>
-<tr>
-<td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/Comentários/1.jpg"></td>
-<td>
-<font class="fb-comments-comment-name">
-<name>Jorge Amadeu </name>
-</font>
-</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-text">Nunca achei que fosse possível! Mês que vêm já estou indo para o sul!</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-actions">
-<like>Curtir</like>
-·
-<reply>Responder</reply>
-·
-<date>4 min</date>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="fb-comments-wrapper" id="3">
-<table class="fb-comments-comment">
-<tbody>
-<tr>
-<td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/Comentários/2.jpg"></td>
-<td>
-<font class="fb-comments-comment-name">
-<name>Jaqueline Almeida</name>
-</font>
-</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-text">Gente! Que coisa fantástica! Nunca achei possível viajar com tão pouco! Já de malas prontas rsrsrs</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-actions">
-<like>Curtir</like>
-·
-<reply>Responder</reply>
-·
-<date>10 min</date>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="fb-comments-wrapper" id="4">
-<table class="fb-comments-comment">
-<tbody>
-<tr>
-<td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/Comentários/3.jpg"></td>
-<td>
-<font class="fb-comments-comment-name">
-<name>Mariana Martins</name>
-</font>
-</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-text">Melhor investimento que já fiz! Nunca achei que conseguiria poupar tanto em uma única viagem!</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-actions">
-<like>Curtir</like>
-·
-<reply>Responder</reply>
-·
-<date>12 min</date>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="fb-comments-wrapper" id="5">
-<table class="fb-comments-comment">
-<tbody>
-<tr>
-<td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/Comentários/4.jpg"></td>
-<td>
-<font class="fb-comments-comment-name">
-<name>Josiane Garcia</name>
-</font>
- </td>
-</tr>
-<tr>
-<td class="fb-comments-comment-text">Vi hoje antes de ir pro serviço, nossa há tempo que eu não sentia tanta vontade de viajar! Muito obrigada 🥰</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-actions">
-<like>Curtir</like>
-·
-<reply>Responder</reply>
-·
-<date>19 min</date>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="fb-comments-wrapper" id="6">
-<table class="fb-comments-comment">
-<tbody>
-<tr>
-<td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/Comentários/5.jpg"></td>
-<td>
-<font class="fb-comments-comment-name">
-<name>Viviane Araújo</name>
-</font>
-</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-text"> Tem anjos na terra sim! Nada como saber como viajar economizando!</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-actions">
-<like>Curtir</like>
-·
-<reply>Responder</reply>
-·
-<date>24 min</date>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="fb-comments-wrapper" id="7">
-<table class="fb-comments-comment">
-<tbody>
-<tr>
-<td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/Comentários/6.jpg"></td>
-<td>
-<font class="fb-comments-comment-name">
-<name>Pedro Andrade</name>
-</font>
-</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-text">Depois de tantos dias pesquisando, descobri esse vídeo milagroso... Partiu Inglaterra!</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-actions">
-<like>Curtir</like>
-·
-<reply>Responder</reply>
-·
-<date>26 min</date>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="fb-comments-wrapper" id="9">
-<table class="fb-comments-comment">
-<tbody>
-<tr>
-<td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/Comentários/7.jpg">
-</td>
-<td>
-<font class="fb-comments-comment-name">
-<name>Lucas Nakano</name>
-</font>
-</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-text">Gosto sempre de ter a certeza dos gastos antes de tirar a mala de casa... Agora sei que posso embarcar tranquilo!</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-actions">
- <like>Curtir</like>
-·
-<reply>Responder</reply>
-·
-<date>39 min</date>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<button class="fb-comments-loadmore" onclick="javascript:loadMore();">Carregar mais 5 comentários</button>
-<div style="display:none" id="more">
-<div class="fb-comments-wrapper">
-<table class="fb-comments-comment" id="10">
-<tbody>
-<tr>
-<td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/Comentários/8.jpg">
-</td>
-<td>
-<font class="fb-comments-comment-name">
-<name>Willian Andrade</name>
-</font>
-</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-text">Por que nunca tinha visto esse vídeo? hahahaha Excelente para qualquer um que busca solução para viagens caras!</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-actions">
-<like>Curtir</like>
-·
-<reply>Responder</reply>
-·
-<date>1 h</date>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="fb-comments-wrapper" id="11">
-<table class="fb-comments-comment">
-<tbody>
-<tr>
-<td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/Comentários/9.jpg">
-</td>
-<td>
-<font class="fb-comments-comment-name">
-<name>Lilian Wagmaker</name>
-</font>
-</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-text">Gente do céu! Simples e eficaz! Semana que vêm estou indo com meu marido para as maldivas... mega obrigado pelas dicas 🥰🥰🥰 </td>
-</tr>
-<tr>
-<td class="fb-comments-comment-actions">
-<like>Curtir</like>
-·
-<reply>Responder</reply>
-·
-<date>1 h</date>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="fb-comments-wrapper" id="12">
-<table class="fb-comments-comment">
-<tbody>
-<tr>
-<td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/Comentários/10.jpg">
-</td>
-<td>
-<font class="fb-comments-comment-name">
-<name>Daniela Costa</name>
-</font>
-</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-text">Muito obrigada me ajudou no ajuste dos gastos com a família na viagem que vamos fazer mês que vêm 🌹🙋</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-actions">
-<like>Curtir</like>
-·
-<reply>Responder</reply>
-·
-<date>1 h</date>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="fb-comments-wrapper" id="13">
-<table class="fb-comments-comment">
-<tbody>
-<tr>
-<td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/Comentários/11.jpg"></td>
-<td>
-<font class="fb-comments-comment-name">
-<name>Juliano Moreira</name>
-</font>
-</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-text">Em 1 semana viajando economizamos quase dois salários mínimos, muito bom!</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-actions">
-<like>Curtir</like>
-·
-<reply>Responder</reply>
-·
-<date>1 h</date>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="fb-comments-wrapper">
-<table class="fb-comments-comment" id="14">
-<tbody>
-<tr>
-<td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/Comentários/12.jpg">
-</td>
-<td>
-<font class="fb-comments-comment-name">
-<name>Amadeu Cavalcante</name>
-</font>
-</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-text">Não achava ser possível alguém conseguir me mostrar que consigo gastar menos e curtindo mais! Muito obrigado...</td>
-</tr>
-<tr>
-<td class="fb-comments-comment-actions">
-<like>Curtir</like>
-·
-<reply>Responder</reply>
-·
-<date>1 h</date>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-
-<div id="cta2" class="mt-4 d-none">
-<a href="https://pay.hotmart.com/K76088833M?checkoutMode=10" class="a-btn" style="text-decoration: none;">
-<span class="span-btn">QUERO COMPRAR AGORA!</span>
-<span class="span-btn2">(atenção: tempo limitado)</span>
-</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<footer class="bg-dark py-3 text-center">
-<div class="text-white"><a href="termos.html" class="text-white">Termos de Uso</a> | <a href="privacidade.html" class="text-white">Política de Privacidade</a></div>
-</footer>
-
-<script type="text/javascript">
-      setTimeout(() => {document.getElementById("cta1").classList.remove("d-none"); document.getElementById("cta2").classList.remove("d-none")}, 1078000); // temporização da Call to Action (em milissegundos)
-    </script>
-
-<!-- Popup Sair da Página -->
-<script src="./assets/js/exit.js"></script>
-<script>exit_intent();</script>
 <script>
-                function popit(){
-                    $("#exitPage").show();
-                    $("#mainContent").hide();
-                    video01Player.pause();
-                }
-            </script>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="./assets/js/com.js"></script>
-
+    function segunda() {
+      document.getElementById("primeira").classList.add("hide")
+      document.getElementById("segunda").classList.remove("hide")
+    }
+    function terceira() {
+      document.getElementById("segunda").classList.add("hide")
+      document.getElementById("terceira").classList.remove("hide")
+    }
+    function redirect() {
+      location.href = "https://viajanteeco.online/"
+    }
+  </script>
 </body>
 </html>
